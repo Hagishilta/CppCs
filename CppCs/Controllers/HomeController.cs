@@ -13,13 +13,13 @@ namespace CppCs.Controllers
 {
     public class HomeController : Controller
     {
-        [DllImport("C:\\Users\\John Lee\\Desktop\\AvokadoLab\\2020\\Test1\\CppCs\\CppCs\\cfile\\test2.dll", CallingConvention = CallingConvention.Cdecl)]
+        [DllImport("./cfile/test2.dll", CallingConvention = CallingConvention.Cdecl)]
         static extern int add(int a, int b);
 
         //[DllImport("~/cfile/test2.dll", CallingConvention = CallingConvention.Cdecl)]
         //static extern void myThread1();
 
-        [DllImport("C:\\Users\\John Lee\\Desktop\\AvokadoLab\\2020\\Test1\\CppCs\\CppCs\\cfile\\test2.dll", CallingConvention = CallingConvention.Cdecl)]
+        [DllImport("./cfile/test2.dll", CallingConvention = CallingConvention.Cdecl)]
         static extern void justPrint();
 
         private readonly ILogger<HomeController> _logger;
