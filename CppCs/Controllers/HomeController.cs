@@ -39,15 +39,17 @@ namespace CppCs.Controllers
         public string Index()
         {
             //return View();
-            string str;
+            
             justPrint();
 
             //myThread1();
             //startscrew(0, null);
 
+            string str;
             str = "Hello World...! " + add(1, 2) + ' ' + add(3, 4);
-            //int a = add(1, 2);
             //str = "Hello World...! " + 3;
+
+            ioread();
 
             return str;
         }
