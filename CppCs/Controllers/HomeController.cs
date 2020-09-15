@@ -23,8 +23,11 @@ namespace CppCs.Controllers
         [DllImport("./cfile/libtest4", CallingConvention = CallingConvention.Cdecl)]
         static extern void justPrint();
 
-        [DllImport("./cfile/screwtest/libscrew", CallingConvention = CallingConvention.Cdecl, CharSet = CharSet.Unicode)]
-        static extern void startscrew(int argc, string[] argv);
+        //[DllImport("./cfile/screwtest/libscrew", CallingConvention = CallingConvention.Cdecl, CharSet = CharSet.Unicode)]
+        //static extern void startscrew(int argc, string[] argv);
+
+        [DllImport("./cfile/libioread", CallingConvention = CallingConvention.Cdecl)]
+        static extern void ioread();
 
         private readonly ILogger<HomeController> _logger;
 
@@ -40,7 +43,7 @@ namespace CppCs.Controllers
             justPrint();
 
             //myThread1();
-            startscrew(0, null);
+            //startscrew(0, null);
 
             str = "Hello World...! " + add(1, 2) + ' ' + add(3, 4);
             //int a = add(1, 2);
