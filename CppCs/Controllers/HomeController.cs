@@ -23,7 +23,7 @@ namespace CppCs.Controllers
         [DllImport("./cfile/libtest4", CallingConvention = CallingConvention.Cdecl)]
         static extern void justPrint();
 
-        [DllImport("./cfile/screwtest/libscrew2", CallingConvention = CallingConvention.Cdecl, CharSet = CharSet.Unicode)]
+        [DllImport("./cfile/screwtest/libscrew", CallingConvention = CallingConvention.Cdecl, CharSet = CharSet.Unicode)]
         static extern void startscrew(int argc, string[] argv);
 
         [DllImport("./cfile/libioread", CallingConvention = CallingConvention.Cdecl)]
