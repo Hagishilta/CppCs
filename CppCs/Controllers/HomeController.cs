@@ -34,13 +34,13 @@ namespace CppCs.Controllers
         {
             //return View();
             string str;
-            justPrint();
+            //justPrint();
 
             //myThread1();
 
-            str = "Hello World...! " + add(1, 2) + ' ' + add(3, 4);
+            //str = "Hello World...! " + add(1, 2) + ' ' + add(3, 4);
             //int a = add(1, 2);
-            //str = "Hello World...! " + 3;
+            str = "Hello World...! " + 3;
 
             return str;
         }
