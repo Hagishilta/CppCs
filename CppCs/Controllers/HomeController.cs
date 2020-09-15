@@ -34,7 +34,7 @@ namespace CppCs.Controllers
         {
             //return View();
             string str;
-            //justPrint();
+            justPrint();
 
             //myThread1();
 
