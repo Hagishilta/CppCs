@@ -1,3 +1,9 @@
+#ifdef BUILD_MY_DLL
+	#define SHARED_LIB __declspec(dllexport)
+#else
+	#define SHARED_LIB __declspec(dllimport)
+#endif
+
 #include "SPI.h"
 #include "TMC5160.h"
 #include <sys/stat.h>
@@ -9,12 +15,6 @@
 #include <stdint.h>
 #include <wiringPi.h>	// wiringPi
 #include <pthread.h>	// threading
-
-#ifdef BUILD_MY_DLL
-    #define SHARED_LIB __declspec(dllexport)
-#else
-    #define SHARED_LIB __declspec(dllimport)
-#endif
 
 void *thread1(void *data);
 void *thread2(void *data);
