@@ -7,6 +7,7 @@ using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Logging;
 using CppCs.Models;
 using System.Runtime.InteropServices;
+using System.Threading;
 
 
 namespace CppCs.Controllers
@@ -29,6 +30,15 @@ namespace CppCs.Controllers
         [DllImport("./cfile/libioread", CallingConvention = CallingConvention.Cdecl)]
         static extern void ioread();
 
+        [DllImport("./cfile/test.dll", CallingConvention = CallingConvention.Cdecl)]
+        static extern void init();
+
+        [DllImport("./cfile/test.dll", CallingConvention = CallingConvention.Cdecl)]
+        static extern void print();
+
+        [DllImport("./cfile/test.dll", CallingConvention = CallingConvention.Cdecl)]
+        static extern void main();
+
         private readonly ILogger<HomeController> _logger;
 
         public HomeController(ILogger<HomeController> logger)
@@ -39,17 +49,25 @@ namespace CppCs.Controllers
         public string Index()
         {
             //return View();
-            
-            justPrint();
+
+            //justPrint();
 
             //myThread1();
-            startscrew(0, null);
+            //startscrew(0, null);
 
             string str;
-            str = "Hello World...! " + add(1, 2) + ' ' + add(3, 4);
-            //str = "Hello World...! " + 3;
+            //str = "Hello World...! " + add(1, 2) + ' ' + add(3, 4);
+            str = "Hello World...! " + 3;
 
-            ioread();
+            //ioread();
+
+            init();
+            Console.WriteLine("init() done...");
+            Thread.Sleep(1);
+            print();
+            Console.WriteLine("print() done...");
+
+            //main();
 
             return str;
         }
