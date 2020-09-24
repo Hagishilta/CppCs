@@ -73,22 +73,22 @@ namespace CppCs.Controllers
         {
             //return View();
 
-            //justPrint();
+            justPrint();
 
             //myThread1();
             //startscrew(0, null);
 
             string str;
-            //str = "Hello World...! " + add(1, 2) + ' ' + add(3, 4);
-            str = "Hello World...! " + 3;
+            str = "Hello World...! " + add(1, 2) + ' ' + add(3, 4);
+            //str = "Hello World...! " + 3;
 
             //ioread();
 
-            init();
-            Console.WriteLine("init() done...");
-            Thread.Sleep(1);
-            print();
-            Console.WriteLine("print() done...");
+            //init();
+            //Console.WriteLine("init() done...");
+            //Thread.Sleep(1);
+            //print();
+            //Console.WriteLine("print() done...");
 
             //main();
 
