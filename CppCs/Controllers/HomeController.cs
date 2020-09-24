@@ -39,6 +39,29 @@ namespace CppCs.Controllers
         [DllImport("./cfile/test.dll", CallingConvention = CallingConvention.Cdecl)]
         static extern void main();
 
+        #region threadtest
+        [DllImport("./cfile/threadtest/conveyor1", CallingConvention = CallingConvention.Cdecl)]
+        static extern void run_thread1();
+        [DllImport("./cfile/threadtest/conveyor1", CallingConvention = CallingConvention.Cdecl)]
+        static extern void run_thread2();
+        [DllImport("./cfile/threadtest/conveyor1", CallingConvention = CallingConvention.Cdecl)]
+        static extern void run_thread3();
+
+        [DllImport("./cfile/threadtest/conveyor1", CallingConvention = CallingConvention.Cdecl)]
+        static extern void stop_thread1();
+        [DllImport("./cfile/threadtest/conveyor1", CallingConvention = CallingConvention.Cdecl)]
+        static extern void stop_thread2();
+        [DllImport("./cfile/threadtest/conveyor1", CallingConvention = CallingConvention.Cdecl)]
+        static extern void stop_thread3();
+
+        [DllImport("./cfile/threadtest/conveyor1", CallingConvention = CallingConvention.Cdecl)]
+        static extern void isrun_thread1();
+        [DllImport("./cfile/threadtest/conveyor1", CallingConvention = CallingConvention.Cdecl)]
+        static extern void isrun_thread2();
+        [DllImport("./cfile/threadtest/conveyor1", CallingConvention = CallingConvention.Cdecl)]
+        static extern void isrun_thread3();
+        #endregion
+
         private readonly ILogger<HomeController> _logger;
 
         public HomeController(ILogger<HomeController> logger)
