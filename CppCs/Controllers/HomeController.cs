@@ -55,6 +55,8 @@ namespace CppCs.Controllers
         static extern void stop_thread3();
 
         [DllImport("./cfile/threadtest/conveyor1", CallingConvention = CallingConvention.Cdecl)]
+        static extern void isrun_threadAll();
+        [DllImport("./cfile/threadtest/conveyor1", CallingConvention = CallingConvention.Cdecl)]
         static extern void isrun_thread1();
         [DllImport("./cfile/threadtest/conveyor1", CallingConvention = CallingConvention.Cdecl)]
         static extern void isrun_thread2();
@@ -95,22 +97,22 @@ namespace CppCs.Controllers
 
 
             #region threadtest
-            
-            isrun_thread1();
+
+            isrun_threadAll();
             Thread.Sleep(1000);
             run_thread1();
             Thread.Sleep(5000);
-            isrun_thread1();
+            isrun_threadAll();
             Thread.Sleep(1000);
 
             Console.WriteLine("stop thread..");
             stop_thread1();
             Thread.Sleep(1000);
-            isrun_thread1();
+            isrun_threadAll();
             Thread.Sleep(1000);
-            isrun_thread1();
+            isrun_threadAll();
             Thread.Sleep(1000);
-            isrun_thread1();
+            isrun_threadAll();
 
             #endregion
 
