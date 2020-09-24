@@ -97,15 +97,15 @@ namespace CppCs.Controllers
             #region threadtest
             
             isrun_thread1();
-            Thread.Sleep(1);
+            Thread.Sleep(1000);
             run_thread1();
             Thread.Sleep(5000);
             isrun_thread1();
-            Thread.Sleep(1);
+            Thread.Sleep(1000);
 
             Console.WriteLine("stop thread..");
             stop_thread1();
-            Thread.Sleep(1);
+            Thread.Sleep(1000);
             isrun_thread1();
             
             #endregion
