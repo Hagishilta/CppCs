@@ -263,14 +263,23 @@ void run_thread3(){
 
 void stop_thread1(){
     pthread_cancel(p_thread_1);
+    pthread_mutex_lock(&mutex);
+    test_value1 = 0;
+    pthread_mutex_unlock(&mutex);
 }
 
 void stop_thread2(){
     pthread_cancel(p_thread_2);
+    pthread_mutex_lock(&mutex);
+    test_value2 = 0;
+    pthread_mutex_unlock(&mutex);
 }
 
 void stop_thread3(){
     pthread_cancel(p_thread_3);
+    pthread_mutex_lock(&mutex);
+    test_value3 = 0;
+    pthread_mutex_unlock(&mutex);
 }
 
 void isrun_threadAll(){

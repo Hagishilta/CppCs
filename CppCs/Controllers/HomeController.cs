@@ -107,7 +107,11 @@ namespace CppCs.Controllers
             stop_thread1();
             Thread.Sleep(1000);
             isrun_thread1();
-            
+            Thread.Sleep(1000);
+            isrun_thread1();
+            Thread.Sleep(1000);
+            isrun_thread1();
+
             #endregion
 
 
