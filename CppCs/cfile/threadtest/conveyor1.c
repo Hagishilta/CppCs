@@ -119,7 +119,7 @@ void init_conveyor1(){
 
     // hardstopper OPEN
     for(int i=0; i<NUM_HARDSTOPPER; ++i){
-        digitalWrite(outputs[i + 5], 1);
+        digitalWrite(outputs[i + 5].number, 1);
     }
 
     IS_RUNNING = false;
@@ -138,7 +138,7 @@ void *conveyor1_mode_detector(void *data){
             if(currMode == 0){  // STOP MODE
                 digitalWrite(outputs[4].number, 0);
                 for(int i=0; i<NUM_HARDSTOPPER; ++i){
-                    digitalWrite(outputs[i + 5], 1);
+                    digitalWrite(outputs[i + 5].number, 1);
                 }
             }
             else if(currMode > 0){  // AUTO MODE
@@ -146,7 +146,7 @@ void *conveyor1_mode_detector(void *data){
             }
             else if(currMode < 0){  // MANUAL MODE
                 for(int i=0; i<NUM_HARDSTOPPER; ++i){
-                    digitalWrite(outputs[i + 5], 1);
+                    digitalWrite(outputs[i + 5].number, 1);
                 }
                 digitalWrite(outputs[4].number, 1);
             }
@@ -175,6 +175,7 @@ void run_conveyor1(int num_hardstopper){
     
     digitalWrite(outputs[4].number, 1);
 
+/*
     while(TRUE){
         if(conveyor2_isbowl_sensor(num_distributor)){
             // sleep(1);
@@ -184,9 +185,9 @@ void run_conveyor1(int num_hardstopper){
     }
     
     for(int i=0; i<NUM_DISTRIBUTOR; ++i){
-        digitalWrite(outputs[i + 5], 1);
+        digitalWrite(outputs[i + 5].number, 1);
     }
-
+*/
     IS_RUNNING = false;
     pthread_mutex_unlock(&mutex);
 
@@ -330,7 +331,7 @@ void *test_thread3(void *data){
     }
 }
 
-
+/*
 int legacy(int argc, char *argv[])
 {
     if(DEBUG){
@@ -499,3 +500,4 @@ int legacy(int argc, char *argv[])
 
     return 0;
 }
+*/
