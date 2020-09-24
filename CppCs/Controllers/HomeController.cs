@@ -98,7 +98,7 @@ namespace CppCs.Controllers
             isrun_thread1();
             Thread.Sleep(1);
             run_thread1();
-            Thread.Sleep(1);
+            Thread.Sleep(5);
             isrun_thread1();
             Thread.Sleep(1);
             stop_thread1();

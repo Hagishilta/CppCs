@@ -273,6 +273,12 @@ void stop_thread3(){
     pthread_cancel(p_thread_3);
 }
 
+void isrun_threadAll(){
+    isrun_thread1();
+    isrun_thread2();
+    isrun_thread3();
+}
+
 void isrun_thread1(){
     pthread_mutex_lock(&mutex);
     if(test_value1){
@@ -310,6 +316,7 @@ void *test_thread1(void *data){
     pthread_mutex_unlock(&mutex);
     while(1){
         printf("thread 1 running...\n");
+        sleep(1);
     }
 }
 
@@ -319,6 +326,7 @@ void *test_thread2(void *data){
     pthread_mutex_unlock(&mutex);
     while(1){
         printf("thread 2 running...\n");
+        sleep(1);
     }
 }
 
@@ -328,6 +336,7 @@ void *test_thread3(void *data){
     pthread_mutex_unlock(&mutex);
     while(1){
         printf("thread 3 running...\n");
+        sleep(1);
     }
 }
 

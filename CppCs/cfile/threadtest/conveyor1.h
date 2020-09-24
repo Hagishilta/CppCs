@@ -46,15 +46,12 @@ void run_thread3();
 void stop_thread1();
 void stop_thread2();
 void stop_thread3();
+void isrun_threadAll();
 void isrun_thread1();
 void isrun_thread2();
 void isrun_thread3();
 void *test_thread1(void *data);
 void *test_thread2(void *data);
 void *test_thread3(void *data);
-
-
-
-int legacy(int argc, char *argv[]);
 
 #endif
