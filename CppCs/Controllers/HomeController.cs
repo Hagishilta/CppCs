@@ -92,6 +92,22 @@ namespace CppCs.Controllers
 
             //main();
 
+
+
+            #region threadtest
+            isrun_thread1();
+            Thread.Sleep(1);
+            run_thread1();
+            Thread.Sleep(1);
+            isrun_thread1();
+            Thread.Sleep(1);
+            stop_thread1();
+            Thread.Sleep(1);
+            isrun_thread1();
+            #endregion
+
+
+
             return str;
         }
 
