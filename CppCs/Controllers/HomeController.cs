@@ -108,9 +108,11 @@ namespace CppCs.Controllers
             Thread.Sleep(1000);
             isrun_threadAll();
             Thread.Sleep(1000);
-            run_thread2();
+            run_thread3();
             Thread.Sleep(1000);
             isrun_threadAll();
+
+            Thread.Sleep(3000);
 
             Console.WriteLine("stop thread..");
             stop_thread1();
